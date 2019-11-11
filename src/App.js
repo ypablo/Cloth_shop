@@ -7,7 +7,6 @@ import Header from "./components/header/header"
 import SignIn from "./pages/sign-in/sign-in"
 
 function App() {
-
   return (
     <div>
       <Header />
