@@ -4,8 +4,8 @@ import HomePage from "./pages/homepage/homepage"
 import { Switch, Route } from "react-router-dom"
 import Shop from "./pages/shop/shop"
 import Header from "./components/header/header"
-import SignIn from "./pages/sign-in/sign-in"
-import { auth } from "./firebase/firebase.utils"
+import SignInAndSignUpPage from "./pages/sign-in/sign-in"
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils"
 
 class App extends React.Component {
   constructor() {
@@ -18,9 +18,8 @@ class App extends React.Component {
   unsubscribeFromAuth = null
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user })
-      console.log(user)
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
+      createUserProfileDocument(user)
     })
   }
 
@@ -35,7 +34,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={Shop} />
-          <Route path="/signin" component={SignIn} />
+          <Route path="/signin" component={SignInAndSignUpPage} />
         </Switch>
       </div>
     );
