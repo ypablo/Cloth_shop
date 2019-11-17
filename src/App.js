@@ -3,6 +3,7 @@ import './App.css';
 import {connect} from "react-redux"
 import { Switch, Route, Redirect } from "react-router-dom"
 import {setCurrentUser} from "./redux/user/user.actions"
+
 import HomePage from "./pages/homepage/homepage"
 import Shop from "./pages/shop/shop"
 import Header from "./components/header/header"
@@ -42,8 +43,11 @@ class App extends React.Component {
           <Route path="/shop" component={Shop} />
           <Route exact 
             path="/signin" 
-            render={() => this.props.currentUser ? 
-              (<Redirect to="/"/>) : (<SignInAndSignUpPage/>)} />
+            render={() => 
+              this.props.currentUser ? 
+              (<Redirect to="/"/>
+              ) : (
+              <SignInAndSignUpPage/>)} />
         </Switch>
       </div>
     );
@@ -51,7 +55,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = ({user}) => ({
-  setCurrentUser:user.currentUser
+  setCurrentUser: user.currentUser
 })
 
 const mapDispatchToProps = dispatch => ({
