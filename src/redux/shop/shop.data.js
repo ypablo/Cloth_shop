@@ -115,7 +115,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+ {
     id: 3,
     title: 'Jackets',
     routeName: 'jackets',
@@ -201,7 +201,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+ {
     id: 5,
     title: 'Mens',
     routeName: 'mens',
@@ -244,6 +244,6 @@ const SHOP_DATA = [
       }
     ]
   }
-];
+]
 
 export default SHOP_DATA;
