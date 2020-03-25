@@ -4,3 +4,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 600px){
+  .directory-menu {
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+  }
+
+}

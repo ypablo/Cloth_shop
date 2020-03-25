@@ -65,3 +65,13 @@
     }
   }
 }
+
+@media (max-width: 600px){
+  .menu-item {
+    width: 100%;
+  }
+  .content {
+    transform: scale(1.5);
+  }
+  
+}

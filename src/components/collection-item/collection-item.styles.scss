@@ -49,3 +49,12 @@
     }
   }
 }
+@media (max-width: 600px){
+  .collection-item {
+    width: 100%;
+  }
+  .collection-footer {
+    font-weight: 900;
+    padding-left: 10px;
+  }
+}
