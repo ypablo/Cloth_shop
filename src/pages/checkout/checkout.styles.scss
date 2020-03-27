@@ -42,3 +42,17 @@
     font-weight: bold;
   }
 }
+@media (max-width: 600px){
+  .checkout-page {
+    width: 100%;
+    .checkout-header {
+      padding: 10px;
+      .header-block {
+        width: auto;
+        &:last-child {
+          width: auto;
+        }
+      }
+    }
+  }
+}
