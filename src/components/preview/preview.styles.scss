@@ -10,10 +10,17 @@
 
   .preview {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
   }
 }
 @media (max-width: 600px){
-
+  .collection-preview {
+    flex-direction: column;
+    .preview {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }  
 }
