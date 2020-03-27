@@ -45,10 +45,19 @@
     }
   }
 }
+@media (max-width: 950px) {
+  .custom-button {
+    padding: 0;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
 @media (max-width: 600px){
   .custom-button {
-    font-size: 13px;
+    width: 80%;
     padding: 0;
+    left: 10%;
   }
 
 }
